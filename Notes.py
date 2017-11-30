@@ -59,7 +59,7 @@ def print_age(name, age):
     print("Next year, %s will be %d years old" % (name, age))
 
 
-print_age("John",15)
+print_age("John", 15)
 
 
 def algebra_hw(x):
@@ -88,8 +88,30 @@ def grade_calc(percentage):
     else:
         return "F"
 
-print(grade_calc(92))
+
+print(grade_calc(59))
 
 
+def happy_bday(name):
+    print("Happy Birthday to you")
+    print("Happy Birthday to you")
+    print("Happy Birthday dear %s" % name)
+    print("Happy Birthday to you")
+
+# Loops
+
+for num in range (10):
+    print(num + 1)
+
+# White loops (BEWARRRRRRE!!!)
+
+a = 1
+while a < 10:  #this is the condition, it must be true,
+               #to execute
+    print(a)
+    a += 1  # This literates so we can break the loop
 
 
+# Random Numbers
+import random # this should be on line 1
+print(random.randint(0, 1000))
