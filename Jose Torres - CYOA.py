@@ -288,7 +288,7 @@ RESTROOM1 = Room('First Hallway Restroom', None, 'FIRSTHALL', None, None,
 SISTERROOM = Room('Sisters Room', 'FIRSTHALL', None, None, None,
                   'Your in your sisters room but no ones home, theres'
                   ' drawers open in here too. The only way from here is where you came from.')
-LIVINGROOM = Room('Living Room', 'KITCHEN', None, 'FRONTYARD', 'FIRSTHALL',
+LIVINGROOM = Room('Living Room', 'KITCHEN', 'THEATERROOM', 'FRONTYARD', 'FIRSTHALL',
                   'This is the living room, everything is a'
                   ' mess, all the cabinets are open and the couches are moved, the T.V and Xbox are missing too. '
                   'You can go back to the first hallway, North, or East.')
@@ -308,17 +308,22 @@ GARAGE = Room('Garage', None, 'DININGROOM', 'LAUNDRYROOM', 'BACKYARD',
 LAUNDRYROOM = Room('Laundry Room', None, None, None, 'GARAGE',
                    'The laundry room looks like if someone has been in '
                    'here. Theres a key for a cabinet. You can only go West from here.')
-BACKYARD = Room('Back Yard', None, 'SHED', 'GARAGE', None,
+BACKYARD = Room('Back Yard', None, 'SHED', 'GARAGE', 'POOL',
                 'The back yard has foot prints on the dirt, the back gate is'
                 ' open but you cant leave because you have to take care of the house. Theres a taser gun here. You can '
                 'go East or South from here.')
-SHED = Room('Shed', 'BACKYARD', None, None, None,
+SHED = Room('Shed', 'BACKYARD', 'BUNKER', None, None,
             'The shed is dark and almost everything is gone. You hear '
             'a dog barking but theres no one around. You can only go North out of here.')
-
+BUNKER = Room('Bunker', 'SHED', None, None, None, 'Theres nothing in the bunker but an exit, except you need a'
+                                                  ' key to open it.')
+THEATERROOM = Room('Theater Room', 'LIVINGROOM', None, None, None, 'The theater room is also a mess and the screen is'
+                                                                   ' broken and messed up.')
+POOL = Room('Pool', None, None, 'BACKYARD', None,
+            'The Pool has been drained. The only way you can go is east.')
 
 current_node = MYROOM
-directions = ['north', 'south', 'east', 'west']
+directions = ['north', 'south', 'east', 'west', 'pick up']
 short_directions = ['n', 's', 'e', 'w']
 
 while True:
